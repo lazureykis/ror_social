@@ -1,0 +1,8 @@
+- if @users.count == 0
+  %p No users in database.
+  = link_to "Register", new_user_registration_path
+  or
+  = link_to "Log in", new_user_session_path
+- else
+  %ol.users
+    = render @users

@@ -1,0 +1,11 @@
+%h2= @post.title
+%atricle
+  =raw RedCloth.new(@post.body).to_html
+    
+#vk_like
+  :javascript
+    VK.Widgets.Like("vk_like", {type: "10"});
+  
+#vk_comments
+  :javascript
+    VK.Widgets.Comments("vk_comments", {limit: 5, width: "496", attach: "*"});

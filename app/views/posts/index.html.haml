@@ -1,0 +1,12 @@
+- if @posts.count > 0
+  - @posts.each do |p|
+    .post
+      %h3= link_to(p.title, p)
+      .body
+        = p.body
+- else
+  = link_to 'Create post', new_post_path
+  
+%h3 Create Post
+= render 'form'
+  
